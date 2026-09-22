@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1 align="center"> Club Sportif - BackOffice </h1>
+    <header>
+        <hr>
+        <p align="center">
+            <a href="../FrontOffice/index.html">Retour au site</a> | 
+            <a href="activites-liste.html"> Activités</a> |
+            <a href="activite-form.html"> Nouvelle activité</a> |
+            <a href="adherents-liste.html">Adhérents</a> |
+            <a href="adherent-form.html">Nouvel adhérent</a>
+        </p>
+    </header>
+    <content>
+        <hr>
+        <h2 align="center"> Formulaire d'activité </h2>
+        <form action="activites-liste.html" method="post" align="center">
+            <div>
+                <label for="nom">Nom de l'activité :</label>
+                <input type="text" id="nom" name="nom" minlength="3" maxlength="50" pattern="[A-Za-zÀ-ÿ0-9 ]{3,50}" title="Entre 3 et 50 caractères. Lettres, chiffres et espaces uniquement." required>
+            </div>
+            <br>
+            <div> 
+                <label for="categorie">Catégorie :</label>
+                <select id="categorie" name="categorie" required>
+                <option value="football">Football</option>
+                <option value="natation">Natation</option>
+                <option value="fitness">Fitness</option>
+                </select>   
+            </div> 
+            <br>
+            <div>
+              <label for="description">Description :</label>
+              <textarea id="description" name="description" rows="5" cols="30" maxlength="200" required></textarea>  
+            </div>
+            <br>
+            <div>
+                <label for="jour"> Jour :</label>
+                <select id="jour" name="jour" required>
+                   <option value="Lundi">Lundi</option>
+                   <option value="Mardi">Mardi</option>
+                   <option value="Mercredi">Mercredi</option>
+                   <option value="Jeudi">Jeudi</option>
+                   <option value="Vendredi">Vendredi</option>
+                   <option value="Samedi">Samedi</option>
+                   <option value="Dimanche">Dimanche</option>
+            </select>
+            </div>
+            <br>
+            <div>
+                <label for="heure">Horaire :</label>
+                <input type="time" id="heure" name="heure" required>
+            </div>
+            <br>
+            <div>
+                <label for="tarif">Tarif (€/mois) :</label>
+                <input type="number" id="tarif" name="tarif" min="0" max="1000" required>
+            </div>
+            <br>
+            <div>
+            <label for="places">Nombre de places :</label>
+            <input type="number" id="places" name="places" min="1" max="100" required>
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Enregistrer">
+                <input type="reset" value="Annuler">
+            </div>
+        </form>
+    </content>
+    <hr>
+    <footer>
+        <p align="center"> &copy; 2026 Club Sportif - Tous droits réservés. </p>
+    </footer>
+</body>
+</html>

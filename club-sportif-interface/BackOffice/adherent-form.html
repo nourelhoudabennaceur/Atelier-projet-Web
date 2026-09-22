@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adherent form</title>
+</head>
+<body>
+    <h1 align="center"> Adherent Form - BackOffice </h1>
+    <header>
+        <hr>
+        <p align="center">
+            <a href="../FrontOffice/index.html">Retour au site</a> | 
+            <a href="activites-liste.html"> Activités</a> |
+            <a href="activite form.html"> Nouvelle activité</a> |
+            <a href="adherents-liste.html">Adhérents</a> |
+            <a href="adherent-form.html">Nouvel adhérent</a>
+        </p>
+    </header>
+    <content>
+        <hr>
+        <h2 align="center"> Formulaire d'adhérent </h2>
+        <form action="adherents-liste.html" method="post" align="center">
+            <div>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" minlength="3" maxlength="20" pattern="[A-Za-zÀ-ÿ ]{3,20}" title="Entre 3 et 20 caractères. Lettres et espaces uniquement." required>
+            </div>
+            <br>
+            <div>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" minlength="3" maxlength="20" pattern="[A-Za-zÀ-ÿ ]{3,20}" title="Entre 3 et 20 caractères. Lettres et espaces uniquement." required>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" id="email" placeholder="contact@exemple.com" name="email" required>
+            </div>
+            <br>
+            <div>
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" pattern="[0-9]{8,15}" minlength="8" maxlength="15" title="8 à 15 chiffres uniquement." required>
+            </div>
+            <br>
+            <div>
+                <label for="activite"> Activité :</label>
+                <select id="activite" name="activite" required>
+                <option value="football">Football</option>
+                <option value="natation">Natation</option>
+                <option value="fitness">Fitness</option>
+                </select>   
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Enregistrer">
+                <input type="reset" value="Annuler">
+            </div>
+        </form>
+        <hr>
+    </content>
+    <footer>
+        <p align="center"> &copy; 2026 Club Sportif - Tous droits réservés. </p>
+    </footer>
+</body>
+</html>
